@@ -6,9 +6,27 @@ namespace classes_opdracht1
 {
     class Gegevens_L
     {
-        public string strVoornaam;
-        public string strAchternaam;
-        public string strKlas;
+        private string strVoornaam;
+        private string strAchternaam;
+        private string strKlas;
+
+        public string STRVOORNAAM
+        {
+            get { return strVoornaam; }
+            set { strVoornaam = value; }
+        }
+        public string STRACHTERNAAM
+        {
+            get { return strAchternaam; }
+            set { strAchternaam = value; }
+        }
+        public string STRKLAS
+        {
+            get { return strKlas; }
+            set { strKlas = value; }
+        }
+
+
         public Gegevens_L()
         {
             Console.Write("Geef uw voornaam: ");
@@ -22,11 +40,11 @@ namespace classes_opdracht1
         public void Aanpassen(Gegevens_L leerling)
         {
             Console.Write("Geef uw voornaam: ");
-            strVoornaam = Console.ReadLine();
+            leerling.STRVOORNAAM = Console.ReadLine();
             Console.Write("Geef uw achternaam: ");
-            strAchternaam = Console.ReadLine();
+            leerling.STRACHTERNAAM = Console.ReadLine();
             Console.Write("Geef uw klas: ");
-            strKlas = Console.ReadLine();
+            leerling.STRKLAS = Console.ReadLine();
             Console.Clear();
         }
 
